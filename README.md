@@ -5,7 +5,7 @@ Multivariate time-series forecasting of household appliance energy consumption u
 
 ## Project Overview
 
-The pipeline trains and compares five models Ridge Regression, Random Forest, LSTM, GRU, and CNN-LSTM on 10-minute interval energy data recorded across a Belgian residence from January to May 2016.
+The pipeline trains and compares five models Ridge Regression, Random Forest, LSTM, GRU, and CNN-LSTM on 10-minute interval energy data recorded from January to May 2016.
 
 **Best result:** LSTM - MAE ≈ 13.5 Wh, R² ≈ 0.72
 
