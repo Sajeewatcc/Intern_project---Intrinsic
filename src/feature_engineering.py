@@ -1,4 +1,4 @@
-"""feature_engineering.py — Step 2: Cyclical encoding, lags, rolling, interactions, MinMaxScaling."""
+"""feature_engineering.py - Step 2: Cyclical encoding, lags, rolling, interactions, MinMaxScaling."""
 
 import os
 import pandas as pd
