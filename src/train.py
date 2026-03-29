@@ -1,4 +1,4 @@
-"""train.py — Step 3: Train and evaluate Ridge Regression and Random Forest baselines."""
+"""train.py - Step 3: Train and evaluate Ridge Regression and Random Forest baselines."""
 
 import os
 import sys
@@ -58,13 +58,13 @@ def plot_pred_vs_actual(y_test, y_pred, model_name, filename):
     lim = [min(y_test.min(), y_pred.min()), max(y_test.max(), y_pred.max())]
     axes[0].scatter(y_test, y_pred, alpha=0.3, s=8, color="steelblue")
     axes[0].plot(lim, lim, "r--", linewidth=1, label="Perfect prediction")
-    axes[0].set(title=f"{model_name} — Predicted vs Actual",
+    axes[0].set(title=f"{model_name} - Predicted vs Actual",
                 xlabel="Actual (Wh)", ylabel="Predicted (Wh)")
     axes[0].legend()
     n = min(500, len(y_test))
     axes[1].plot(y_test[:n], label="Actual",    linewidth=0.8, color="steelblue")
     axes[1].plot(y_pred[:n], label="Predicted", linewidth=0.8, color="salmon", alpha=0.8)
-    axes[1].set(title=f"{model_name} — First {n} Test Predictions",
+    axes[1].set(title=f"{model_name} - First {n} Test Predictions",
                 xlabel="Test index", ylabel="Energy (Wh)")
     axes[1].legend()
     plt.tight_layout()
@@ -77,7 +77,7 @@ def plot_residuals(y_test, lr_pred, rf_pred):
     for ax, name, y_pred in zip(axes, ["Linear Regression", "Random Forest"], [lr_pred, rf_pred]):
         ax.scatter(y_pred, y_test - y_pred, alpha=0.3, s=6, color="steelblue")
         ax.axhline(0, color="red", linestyle="--", linewidth=1)
-        ax.set_title(f"{name} — Residuals")
+        ax.set_title(f"{name} - Residuals")
         ax.set_xlabel("Fitted values (Wh)")
         ax.set_ylabel("Residuals (Wh)")
     plt.tight_layout()
@@ -93,7 +93,7 @@ def plot_metrics_comparison(lr_metrics, rf_metrics):
     ax.bar(x + width/2, [rf_metrics[m] for m in metrics], width, label="Random Forest",      color="salmon")
     ax.set_xticks(x)
     ax.set_xticklabels(metrics)
-    ax.set_title("Model Performance Comparison — LR vs RF")
+    ax.set_title("Model Performance Comparison - LR vs RF")
     ax.set_ylabel("Metric Value")
     ax.legend()
     plt.tight_layout()
@@ -103,7 +103,7 @@ def plot_metrics_comparison(lr_metrics, rf_metrics):
 
 def run():
     print("=" * 50)
-    print("STEP 3 — Baseline Model Training")
+    print("STEP 3 - Baseline Model Training")
     print("=" * 50)
     os.makedirs(PLOT_DIR, exist_ok=True)
 
