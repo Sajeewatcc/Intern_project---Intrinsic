@@ -1,4 +1,4 @@
-"""data_preprocessing.py — Step 1: Load → clean → outlier cap → time features → split → save."""
+"""data_preprocessing.py - Step 1: Load → clean → outlier cap → time features → split → save."""
 
 import os
 import pandas as pd
@@ -60,7 +60,7 @@ def split_data(df, train_ratio=0.80):
 
 def run():
     print("=" * 50)
-    print("STEP 1 — Data Preprocessing")
+    print("STEP 1 - Data Preprocessing")
     print("=" * 50)
     os.makedirs(PROC_DIR, exist_ok=True)
     df = load_data(RAW_PATH)
