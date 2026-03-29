@@ -24,7 +24,7 @@ PROC_DIR      = os.path.join(ROOT_DIR, "data", "processed")
 MODELS_DIR    = os.path.join(ROOT_DIR, "models")
 PLOT_DIR      = os.path.join(ROOT_DIR, "Plots and Visualizations")
 TARGET        = "Appliances"
-LSTM_SEQ_LEN  = 144  # 24 hours — plays to LSTM's long-range memory advantage
+LSTM_SEQ_LEN  = 144  # 24 hours - plays to LSTM's long-range memory advantage
 
 LSTM_PARAMS     = {"units": 128, "dropout": 0.2, "lr": 0.001}
 GRU_PARAMS      = {"units": 64,  "dropout": 0.2, "lr": 0.001}
@@ -90,7 +90,7 @@ def plot_dl_residuals(pred_pairs):
     for ax, (name, (y_true, y_pred)) in zip(axes, pred_pairs.items()):
         ax.scatter(y_pred, y_true - y_pred, alpha=0.3, s=5, color="steelblue")
         ax.axhline(0, color="red", linestyle="--", linewidth=1)
-        ax.set_title(f"{name} — Residuals")
+        ax.set_title(f"{name} - Residuals")
         ax.set_xlabel("Fitted values")
         ax.set_ylabel("Residuals")
     plt.tight_layout()
