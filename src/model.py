@@ -1,4 +1,4 @@
-"""model.py — Model architectures, sequence creation, evaluation, and callbacks."""
+"""model.py - Model architectures, sequence creation, evaluation, and callbacks."""
 
 import numpy as np
 from sklearn.linear_model import Ridge
